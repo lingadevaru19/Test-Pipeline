@@ -9,24 +9,21 @@ pipeline {
         stage('Test in Parallel') {
             parallel {
                 stage('Test on Linux') {
-                    agent { label 'linux' }
                     steps {
                         echo 'Running tests on Linux'
-                        // Commands for testing on Linux
+                    // Commands for testing on Linux
                     }
                 }
                 stage('Test on Windows') {
-                    agent { label 'windows' }
                     steps {
                         echo 'Running tests on Windows'
-                        // Commands for testing on Windows
+                    // Commands for testing on Windows
                     }
                 }
                 stage('Test on macOS') {
-                    agent { label 'macos' }
                     steps {
                         echo 'Running tests on macOS'
-                        // Commands for testing on macOS
+                    // Commands for testing on macOS
                     }
                 }
             }
